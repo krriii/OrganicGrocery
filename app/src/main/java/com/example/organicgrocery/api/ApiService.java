@@ -7,9 +7,11 @@ import com.example.organicgrocery.api.response.RegisterResponse;
 import com.example.organicgrocery.api.response.SliderResponse;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -38,6 +40,39 @@ public interface ApiService {
     @GET("/ecommerce/api/v1/get-products-by-category")
     Call<AllProductResponse> getProductsByCategory(@Query("c_id") int catid);
 
+    @FormUrlEncoded
+    @POST("/ecommerce/api/v1/order")
+    Call<RegisterResponse> order(@Header("Apikey") String apikey,
+                                 @Field("p_type") int p_type,
+                                 @Field("address_id") int address_id,
+                                 @Field("payment_refrence") String paymentRefrence);
+
+    @FormUrlEncoded
+    @POST("/ecommerce/api/v1/cart")
+    Call<AllProductResponse> addToCart(@Header("Apikey") String apikey, @Field("p_id") int p, @Field("quantity") int q);
+
+    @GET("/ecommerce/api/v1/cart")
+    Call<AllProductResponse> getMyCart(@Header("Apikey") String apikey);
+
+    @DELETE("/ecommerce/api/v1/cart")
+    Call<RegisterResponse> deleteFromCart(@Header("Apikey") String apikey, @Query("c_id") int cartID);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
