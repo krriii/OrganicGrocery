@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:text="Login"
+            android:textColor="#A0C8EB"
+            android:textSize="33dp"
+            android:textStyle="bold" />
+
+
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_at"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_padlock"
+            android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:longClickable="false"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
+
+
+
+
+
+
+
+        <!--    <EditText-->
+        <!--        android:id="@+id/passwordET"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="10dp"-->
+        <!--        android:background="@drawable/edit_text_background"-->
+        <!--        android:drawableLeft="@drawable/ic_padlock"-->
+        <!--        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"-->
+        <!--        android:drawablePadding="10dp"-->
+        <!--        android:hint="Password"-->
+        <!--        android:inputType="textPassword"-->
+        <!--        android:longClickable="false"-->
+        <!--        android:padding="12dp"-->
+        <!--        android:textSize="14sp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
+            android:text="Forget Password?"
+            android:textColor="#A0C8EB" />
+
+        <LinearLayout
+            android:id="@+id/loginall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectange_box"
+            android:onClick="onLoginClicked"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Login"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/circularProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/priceGray"/>
+
+</LinearLayout>

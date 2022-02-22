@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+   android:padding="10dp"
+    android:id="@+id/mainLL"
+    >
+
+
+    <ImageView
+        android:id="@+id/productIV"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/organiccoffeebean"
+        android:layout_marginBottom="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/productNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Coffee Beans"
+
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/discountPriceTV"
+        android:text="Rs. 2990"
+        android:layout_marginTop="10dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <TextView
+            android:text="Rs. 3200"
+            android:id="@+id/productPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/strike"
+            android:maxLines="2"
+            android:textColor="@color/priceGray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/discountPercentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:paddingLeft="2dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/addtocartproditem"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/rectange_box"-->
+<!--            android:onClick="onAddtocartClick"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="4dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:text="Add to Cart"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:textSize="15sp" />-->
+<!--        </LinearLayout>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginLeft="12dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:src="@drawable/ic_heart" />-->
+
+<!--    </LinearLayout>-->
+
+</LinearLayout>
+
