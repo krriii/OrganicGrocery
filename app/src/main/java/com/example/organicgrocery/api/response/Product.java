@@ -38,6 +38,13 @@ public class Product implements Serializable {
     @SerializedName("categories")
     @Expose
     private List<Integer> categories = null;
+    @SerializedName("cart_quantity")
+    @Expose
+    private Integer cartQuantity;
+    @SerializedName("cart_id")
+    @Expose
+    private Integer cartID;
+
 
     public Integer getProductId() {
         return productId;
@@ -117,6 +124,22 @@ public class Product implements Serializable {
 
     public void setCategories(List<Integer> categories) {
         this.categories = categories;
+    }
+
+    public Integer getCartQuantity() {
+        return cartQuantity;
+    }
+
+    public void setCartQuantity(Integer cartQuantity) {
+        this.cartQuantity = cartQuantity;
+    }
+
+    public Integer getCartID() {
+        return cartID;
+    }
+
+    public void setCartID(Integer cartID) {
+        this.cartID = cartID;
     }
 
 

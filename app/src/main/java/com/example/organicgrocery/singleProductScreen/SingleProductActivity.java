@@ -16,6 +16,7 @@ import com.example.organicgrocery.api.ApiClient;
 import com.example.organicgrocery.api.response.AllProductResponse;
 import com.example.organicgrocery.api.response.Product;
 import com.example.organicgrocery.api.response.RegisterResponse;
+import com.example.organicgrocery.api.response.SingleProductResponse;
 import com.example.organicgrocery.api.response.Slider;
 import com.example.organicgrocery.home.fragment.home.adapters.SliderAdapter;
 import com.example.organicgrocery.utils.SharedPrefUtils;
@@ -31,7 +32,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SingleProductActivity extends AppCompatActivity {
-    public static String key = "pKey";
+    public static String DATA_KEY = "ds";
+    public static String SINGLE_DATA_KEY = "sds";
     Product product;
     SliderView imageSlider;
     ProgressBar addingCartPR;
@@ -62,14 +64,34 @@ public class SingleProductActivity extends AppCompatActivity {
         addToCartLL = findViewById(R.id.addToCartLL);
 
         setOnclickListners();
-        if (getIntent().getSerializableExtra(key) != null) {
-            product = (Product) getIntent().getSerializableExtra(key);
+        if (getIntent().getSerializableExtra(DATA_KEY) != null) {
+            product = (Product) getIntent().getSerializableExtra(DATA_KEY);
             setProduct(product);
-        }
-
+        } else if (getIntent().getSerializableExtra(SINGLE_DATA_KEY) != null)
+            getProductOnline(getIntent().getIntExtra(SINGLE_DATA_KEY, 1));
+            setOnclickListners();
 
     }
 
+    private void getProductOnline(int intExtra) {
+        Call<SingleProductResponse> productResponseCall = ApiClient.getClient().getProductById(intExtra);
+        productResponseCall.enqueue(new Callback<SingleProductResponse>() {
+            @Override
+            public void onResponse(Call<SingleProductResponse> call, Response<SingleProductResponse> response) {
+                if (response.isSuccessful()){
+                    if (!response.body().getError()){
+                        product = response.body().getProduct();
+                        setProduct(product);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SingleProductResponse> call, Throwable t) {
+
+            }
+        });
+    }
 
 
     private void setProduct(Product product) {

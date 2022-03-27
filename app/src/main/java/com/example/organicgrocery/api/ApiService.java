@@ -4,6 +4,7 @@ import com.example.organicgrocery.api.response.AllProductResponse;
 import com.example.organicgrocery.api.response.CategoryResponse;
 import com.example.organicgrocery.api.response.LoginResponse;
 import com.example.organicgrocery.api.response.RegisterResponse;
+import com.example.organicgrocery.api.response.SingleProductResponse;
 import com.example.organicgrocery.api.response.SliderResponse;
 
 import retrofit2.Call;
@@ -51,11 +52,15 @@ public interface ApiService {
     @POST("/ecommerce/api/v1/cart")
     Call<AllProductResponse> addToCart(@Header("Apikey") String apikey, @Field("p_id") int p, @Field("quantity") int q);
 
+
     @GET("/ecommerce/api/v1/cart")
     Call<AllProductResponse> getMyCart(@Header("Apikey") String apikey);
 
     @DELETE("/ecommerce/api/v1/cart")
     Call<RegisterResponse> deleteFromCart(@Header("Apikey") String apikey, @Query("c_id") int cartID);
+
+    @GET("/ecommerce/api/v1/get-all-products")
+    Call<SingleProductResponse> getProductById(@Query("id") int c_id);
 
 }
 

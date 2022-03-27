@@ -7,6 +7,45 @@
     android:orientation="vertical"
     tools:context=".home.fragment.home.HomeFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/searchLL"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginEnd="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_search_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Products"
+
+                    />
+
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -59,6 +98,7 @@
                     android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/viewAllTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

@@ -1,94 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
      xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:orientation="horizontal"
-    android:background="@drawable/edit_text_background"
-    android:layout_margin="15dp"
-    android:padding="10dp">
+    android:layout_height="match_parent"
+    tools:context=".home.fragment.CartFragment">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="110dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/organiccoffeebean" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="10dp">
-
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@color/white">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Organic Coffee Bean "
+            android:text="My Cart"
             android:textColor="@color/black"
-            android:textSize="18dp"/>
+            android:textSize="18sp" />
 
-            <ImageView
-                android:layout_width="24dp"
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+       android:id="@+id/swipefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.fragment.CartFragment"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allProductRV"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_baseline_delete_24"/>
+                android:padding="10dp" />
 
+            <LinearLayout
+                android:id="@+id/addToCartLL"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rectange_box"
+                android:gravity="center">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_bag"
+                    app:tint="@color/white" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
 
+                <TextView
+                    android:id="@+id/totalPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rs 2990"
-                android:textSize="18dp"
-                android:textColor="#989494"/>
+        </RelativeLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="35dp"
-            android:gravity="end">
-
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="35dp"
-                android:src="@drawable/ic_minus"/>
-
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/ic_plus"/>
-
-
-
-        </LinearLayout>
-    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
 

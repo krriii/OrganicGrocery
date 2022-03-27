@@ -11,83 +11,12 @@
         android:layout_height="match_parent"
         android:layout_above="@id/homeBottomNav"
         android:orientation="vertical"
-        android:layout_margin="1dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="1dp">
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_baseline_menu_24"
-                android:layout_alignParentLeft="true"
-                android:background="@color/white"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Organic Grocery Mart"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                android:textColor="#A0C8EB"
-                android:layout_centerInParent="true"
-
-            />
-
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_baseline_notifications_24"
-                android:background="@color/white"/>
-
-        </RelativeLayout>
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <LinearLayout
-                    android:paddingEnd="10dp"
-                    android:paddingStart="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:background="@drawable/edit_text_background"
-
-                    android:layout_marginEnd="14dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_baseline_search_24"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="search products"
-
-                        />
-
-
-                </LinearLayout>
-            </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
+       >
         <FrameLayout
-            android:id="@+id/homeFrameContainer"
+            android:id="@+id/homeFL"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/homeBottomNav" />
-
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -97,5 +26,6 @@
         android:layout_alignParentBottom="true"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav" />
+
 
 </RelativeLayout>

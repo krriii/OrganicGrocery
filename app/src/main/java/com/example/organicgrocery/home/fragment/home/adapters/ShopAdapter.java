@@ -24,17 +24,38 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     List<Product> productDataList;
     LayoutInflater layoutInflater;
     Context context;//layout tasney kaam garcha
+    Boolean isCart = false;
+    CartItemClick cartItemClick;
+    Boolean removeEnabled;
 
     public ShopAdapter(List<Product> productDataList, Context context) {
         this.productDataList = productDataList;
         layoutInflater = LayoutInflater.from(context);
         this.context = context;
+        this.isCart = isCart;
+    }
+    public void setCartItemClick(CartItemClick cartItemClick){
+        this.cartItemClick = cartItemClick;
+
+    }
+
+    public interface CartItemClick{
+        public void onRemoveCart(int position);
+    }
+
+    public void setRemoveEnabled(Boolean removeEnabled)
+
+    {
+        this.removeEnabled = removeEnabled;
     }
 
     @NonNull
     @Override
     public ShopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ShopViewHolder(layoutInflater.inflate(R.layout.product_item, parent, false));
+        if (isCart)
+                return new ShopViewHolder(layoutInflater.inflate(R.layout.item_cart, parent, false));
+            else
+                  return new ShopViewHolder(layoutInflater.inflate(R.layout.product_item, parent, false));
     }
 
     @Override
@@ -53,14 +74,40 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
             @Override
             public void onClick(View view) {
                 Intent productPage = new Intent(context, SingleProductActivity.class);
-                productPage.putExtra(SingleProductActivity.key, productDataList.get(holder.getAdapterPosition()));
+                System.out.println(productDataList.get(holder.getAdapterPosition()).getImages());
+                productPage.putExtra(SingleProductActivity.DATA_KEY, productDataList.get(holder.getAdapterPosition()));
                 context.startActivity(productPage);
 
             }
         });
+        if (isCart){
+            if (removeEnabled)
+                holder.removeCartIV.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        cartItemClick.onRemoveCart(holder.getAdapterPosition());
+
+                    }
+                });
+            else
+            {
+                holder.removeCartIV.setVisibility(View.GONE);
+                holder.mainLL.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                setMargins(holder.mainLL, 0, 0, 16, 0);
+            }
+            holder.quantityTv.setText(productDataList.get(position).getCartQuantity() + "");
+
+        }
 
 
 
+    }
+    public static void setMargins(View v, int l, int t, int r, int b) {
+        if (v.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            p.setMargins(l, t, r, b);
+            v.requestLayout();
+        }
     }
 
     @Override
@@ -69,8 +116,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     }
 
     public class ShopViewHolder extends RecyclerView.ViewHolder {
-        ImageView productIV;
-        TextView productNameTV, productPriceTV, discountPriceTV, discountPercentTV;
+        ImageView productIV, removeCartIV;
+        TextView productNameTV, productPriceTV, discountPriceTV, discountPercentTV, quantityTv;
         LinearLayout mainLL;
         public ShopViewHolder( View itemView){
             super(itemView);
@@ -79,6 +126,10 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
             productPriceTV = itemView.findViewById(R.id.productPriceTV);
             discountPriceTV = itemView.findViewById(R.id.discountPriceTV);
             mainLL = itemView.findViewById(R.id.mainLL);
+             if (isCart){
+                 removeCartIV = itemView.findViewById(R.id.removeCartIV);
+                 quantityTv = itemView.findViewById(R.id.quantityTV);
+             }
 
         }
     }

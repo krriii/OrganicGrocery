@@ -13,7 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.organicgrocery.R;
@@ -28,6 +30,7 @@ import com.example.organicgrocery.home.fragment.home.adapters.CategoryAdapter;
 import com.example.organicgrocery.home.fragment.home.adapters.ShopAdapter;
 import com.example.organicgrocery.home.fragment.home.adapters.SliderAdapter;
 import com.example.organicgrocery.utils.DataHolder;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -43,6 +46,10 @@ public class HomeFragment extends Fragment {
     RecyclerView allProductRV, categoryRV;
     ProgressBar loadingProgress;
     SliderView imageSlider;
+    TextView viewAllTV;
+    LinearLayout searchLL;
+    BottomNavigationView bottomNavigationView;
+
 
 
 //    @Override
@@ -57,6 +64,10 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
+    public void setBottomNavigationView(BottomNavigationView bottomNavigationView){
+        this.bottomNavigationView = bottomNavigationView;
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -64,12 +75,32 @@ public class HomeFragment extends Fragment {
         categoryRV = view.findViewById(R.id.categoryRV);
         loadingProgress = view.findViewById(R.id.loadingProgress);
         imageSlider = view.findViewById(R.id.imageSlider);
+        viewAllTV = view.findViewById(R.id.viewAllTV);
+        searchLL = view.findViewById(R.id.searchLL);
         serverCall();
         getCategoriesOnline();
 //        getProductOnline();
         getSliders();
+        setClickListeners();
 
 
+    }
+
+
+    private void setClickListeners() {
+        viewAllTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottomNavigationView.setSelectedItemId(R.id.cartMenu);
+
+            }
+        });
+        searchLL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void getSliders() {
@@ -133,13 +164,13 @@ public class HomeFragment extends Fragment {
 //            }
 //        });
 //    }
-    private void initiateRecyclerView(List<Product> products) {
-        allProductRV.setHasFixedSize(true);
-        allProductRV.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        ShopAdapter shopAdapter = new ShopAdapter(products, getContext());
-        allProductRV.setAdapter(shopAdapter);
-
-    }
+//    private void initiateRecyclerView(List<Product> products) {
+//        allProductRV.setHasFixedSize(true);
+//        allProductRV.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+//        ShopAdapter shopAdapter = new ShopAdapter(products, getContext());
+//        allProductRV.setAdapter(shopAdapter);
+//
+//    }
 
     private void getCategoriesOnline() {
         Call<CategoryResponse> categoriesResponse = ApiClient.getClient().getCategories();
