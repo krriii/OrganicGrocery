@@ -3,9 +3,10 @@ package com.example.organicgrocery.api.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class AllProductResponse {
+public class AllProductResponse implements Serializable {
     @SerializedName("products")
     @Expose
     private List<Product> products = null;

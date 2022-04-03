@@ -29,6 +29,7 @@ import retrofit2.Response;
 public class CategoryActivity extends AppCompatActivity {
 
     public static final String CATEGORY_DATA_KEY = "cdk";
+    public static String CAT_KEY = "ctk";
     Category category;
     RecyclerView allProductRV;
     ProgressBar loadingProgress;

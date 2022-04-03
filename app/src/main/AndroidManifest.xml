@@ -3,6 +3,13 @@
     package="com.example.organicgrocery">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +18,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganicGrocery">
         <activity
+            android:name=".checkout.orderComplete.OrderCompleteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".checkout.CheckOutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".checkout.address.AddressActivity"
+            android:exported="true" />
+        <activity
             android:name=".singleProductScreen.SingleProductActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".categoryPage.CategoryActivity"
             android:exported="false" />
@@ -31,11 +50,13 @@
             android:name=".userAccount.UserAccountActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".home.MainActivity"

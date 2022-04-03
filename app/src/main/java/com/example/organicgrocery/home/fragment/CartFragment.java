@@ -20,6 +20,7 @@ import com.example.organicgrocery.R;
 import com.example.organicgrocery.api.ApiClient;
 import com.example.organicgrocery.api.response.AllProductResponse;
 import com.example.organicgrocery.api.response.Product;
+import com.example.organicgrocery.api.response.RegisterResponse;
 import com.example.organicgrocery.checkout.CheckOutActivity;
 import com.example.organicgrocery.home.fragment.home.adapters.ShopAdapter;
 import com.example.organicgrocery.utils.SharedPrefUtils;
@@ -66,14 +67,25 @@ public class CartFragment extends Fragment {
             public void onClick(View view) {
                 if (allProductResponse != null && allProductResponse.getProducts().size() > 0){
                     Intent intent = new Intent(getContext(), CheckOutActivity.class);
+                    intent.putExtra(CheckOutActivity.CHECK_OUT_PRODUCTS, allProductResponse);
+                    getContext().startActivity(intent);
 
                 }
             }
         });
+        swipefreshlayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipefreshlayout.setRefreshing(true);
+                getCartItems();
+            }
+        });
+
         getCartItems();
     }
     private void getCartItems(){
         String key = SharedPrefUtils.getString(getActivity(), "apk");
+        System.out.println(" sadasdsadasdfsdfsdf    "+ key);
         Call<AllProductResponse> cartItemCall = ApiClient.getClient().getMyCart(key);
         cartItemCall.enqueue(new Callback<AllProductResponse>() {
             @Override
@@ -84,6 +96,7 @@ public class CartFragment extends Fragment {
                         allProductResponse = response.body();
                         products = response.body().getProducts();
                         loadCartList();
+                        setPrice();
                     }
                 }
             }
@@ -96,6 +109,19 @@ public class CartFragment extends Fragment {
 
         });
     }
+
+    private void setPrice() {
+        double totalPrice = 0;
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getDiscountPrice() != 0 || products.get(i).getDiscountPrice() != null)
+                totalPrice = totalPrice + products.get(i).getDiscountPrice();
+            else
+                totalPrice = totalPrice + products.get(i).getPrice();
+        }
+        totalPriceTv.setText("( Rs. " + totalPrice + " )");
+    }
+
+
     private void loadCartList(){
         allProductRV.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -104,8 +130,31 @@ public class CartFragment extends Fragment {
         shopAdapter.setCartItemClick(new ShopAdapter.CartItemClick() {
             @Override
             public void onRemoveCart(int position) {
+                String key = SharedPrefUtils.getString(getActivity(), getString(R.string.api_key));
+                Call<RegisterResponse> removeCartCall = ApiClient.getClient().deleteFromCart(key, products.get(position).getCartID());
+                removeCartCall.enqueue(new Callback<RegisterResponse>() {
+                    @Override
+                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                        if(response.isSuccessful()){
+                            products.remove(products.get(position));
+                            shopAdapter.notifyItemRemoved(position);
+                            setPrice();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
+
+                    }
+                });
 
             }
         });
+        allProductRV.setAdapter(shopAdapter);
+    }
+
+    public void onResume(){
+        super.onResume();
+        getCartItems();
     }
 }

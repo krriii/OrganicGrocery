@@ -23,7 +23,6 @@ import com.example.organicgrocery.utils.SharedPrefUtils;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -154,7 +153,7 @@ public class SingleProductActivity extends AppCompatActivity {
                 isAdding = true;
                 addingToggle(true);
                 String apikey = SharedPrefUtils.getString(this, "apk");
-                Call<AllProductResponse> cartCall = ApiClient.getClient().addToCart(apikey, product.getProductId(), quantity);
+                Call<AllProductResponse> cartCall = ApiClient.getClient().addToCart(apikey, product.getId(), quantity);
                 cartCall.enqueue(new Callback<AllProductResponse>() {
                     @Override
                     public void onResponse(Call<AllProductResponse> call, Response<AllProductResponse> response) {

@@ -8,9 +8,9 @@ import java.util.List;
 
 public class Product implements Serializable {
 
-    @SerializedName("product_id")
+    @SerializedName("id")
     @Expose
-    private Integer productId;
+    private Integer id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -46,12 +46,12 @@ public class Product implements Serializable {
     private Integer cartID;
 
 
-    public Integer getProductId() {
-        return productId;
+    public Integer getId() {
+        return id;
     }
 
     public void setProductId(Integer productId) {
-        this.productId = productId;
+        this.id = id;
     }
 
     public String getName() {

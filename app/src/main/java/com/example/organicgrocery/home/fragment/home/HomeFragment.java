@@ -51,13 +51,6 @@ public class HomeFragment extends Fragment {
     BottomNavigationView bottomNavigationView;
 
 
-
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -143,34 +136,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-//    private void getProductOnline() {
-//        toggleProgress(true);
-//        Call<AllProductResponse> allProductResponseCall = ApiClient.getClient().getAllProducts();
-//        allProductResponseCall.enqueue(new Callback<AllProductResponse>(){
-//
-//            @Override
-//            public void onResponse(Call<AllProductResponse> call, Response<AllProductResponse> response) {
-//              toggleProgress(false);
-//                Toast.makeText(getActivity(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
-//                initiateRecyclerView(response.body().getProducts());
-//            }
-//
-//
-//
-//            @Override
-//            public void onFailure(Call<AllProductResponse> call, Throwable t) {
-//               toggleProgress(false);
-//                Toast.makeText(getActivity(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-//    private void initiateRecyclerView(List<Product> products) {
-//        allProductRV.setHasFixedSize(true);
-//        allProductRV.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-//        ShopAdapter shopAdapter = new ShopAdapter(products, getContext());
-//        allProductRV.setAdapter(shopAdapter);
-//
-//    }
+
 
     private void getCategoriesOnline() {
         Call<CategoryResponse> categoriesResponse = ApiClient.getClient().getCategories();
@@ -221,23 +187,25 @@ public class HomeFragment extends Fragment {
 
     private void serverCall() {
     toggleProgress(true);
-        Call<AllProductResponse> allProductResponseCall = ApiClient.getClient().getAllProducts();
-        allProductResponseCall.enqueue(new Callback<AllProductResponse>() {
-            @Override
-            public void onResponse(Call<AllProductResponse> call, Response<AllProductResponse> response) {
-toggleProgress(false);
-                setProductRecyclerView(response.body().getProducts());
-            }
+       Call<AllProductResponse> allProductResponseCall = ApiClient.getClient().getAllProducts();
 
-            @Override
-            public void onFailure(Call<AllProductResponse> call, Throwable t) {
-                toggleProgress(false);
-                Toast.makeText(getActivity(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+       allProductResponseCall.enqueue(new Callback<AllProductResponse>() {
+           @Override
+           public void onResponse(Call<AllProductResponse> call, Response<AllProductResponse> response) {
+               toggleProgress(false);
+               if (response.isSuccessful()) {
+                   setProductRecyclerView(response.body().getProducts());
+                  System.out.println(response.body().getProducts().toString());
+               }
+           }
 
-//                Toast.makeTest(getActivity(), t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+           @Override
+           public void onFailure(Call<AllProductResponse> call, Throwable t) {
+               toggleProgress(false);
+               Toast.makeText(getActivity(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
-            }
-        });
+           }
+       });
 
     }
 

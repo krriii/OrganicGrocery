@@ -1,6 +1,7 @@
 package com.example.organicgrocery.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -28,5 +29,8 @@ public class SharedPrefUtils {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(key, val);
         editor.apply();
+    }
+
+    public static void clear(Context context) {
     }
 }

@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.organicgrocery.R;
 import com.example.organicgrocery.home.fragment.CartFragment;
@@ -15,6 +16,7 @@ import com.example.organicgrocery.home.fragment.CategoryFragment;
 import com.example.organicgrocery.home.fragment.ProfileFragment;
 import com.example.organicgrocery.home.fragment.WishListFragment;
 import com.example.organicgrocery.home.fragment.home.HomeFragment;
+import com.example.organicgrocery.utils.UserInterfaceUtils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -37,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.homeBottomNav);
         homeFragment = new HomeFragment();
+        homeFragment.setBottomNavigationView(bottomNavigationView);
         currentFragment = homeFragment;
-        getSupportFragmentManager().beginTransaction().add(R.id.homeFrameContainer, homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.homeFL, homeFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -82,17 +85,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public  void  onSearchClicked(View v){
+        Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show();
+    }
 
     void changeFragment(Fragment fragment) {
         //fragment talni hide garney show garney
         getSupportFragmentManager().beginTransaction().hide(currentFragment).commit();//hide the fragment
 
-        if (fragment.isAdded()) {
-            getSupportFragmentManager().beginTransaction().show(fragment).commit();//show the fragment
-        } else {
-            getSupportFragmentManager().beginTransaction().add(R.id.homeFrameContainer, fragment).commit();
+        if (fragment == profileFragment)
+            UserInterfaceUtils.changeStatusBarColor(this, true);
+        else
+            UserInterfaceUtils.changeStatusBarColor(this, false);
+
+        if (fragment.isAdded()){
+            getSupportFragmentManager().beginTransaction().show(fragment).commit();
+
+        }else{
+            getSupportFragmentManager().beginTransaction().add(R.id.homeFL, fragment).commit();
         }
         currentFragment = fragment;
+
     }
 
 }

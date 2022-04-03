@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#ED8E02</color>
     <color name="priceGray">#9C9898</color>
+    <color name="primary">#A0C8EB</color>
 
 <!--    declared colors-->
     <color name="stLine">#C3C0C0</color>

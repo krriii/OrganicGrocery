@@ -1,5 +1,6 @@
 package com.example.organicgrocery.api;
 
+import com.example.organicgrocery.api.response.AddressResponse;
 import com.example.organicgrocery.api.response.AllProductResponse;
 import com.example.organicgrocery.api.response.CategoryResponse;
 import com.example.organicgrocery.api.response.LoginResponse;
@@ -44,8 +45,8 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("/ecommerce/api/v1/order")
     Call<RegisterResponse> order(@Header("Apikey") String apikey,
-                                 @Field("p_type") int p_type,
                                  @Field("address_id") int address_id,
+                                 @Field("p_type") int p_type,
                                  @Field("payment_refrence") String paymentRefrence);
 
     @FormUrlEncoded
@@ -61,6 +62,18 @@ public interface ApiService {
 
     @GET("/ecommerce/api/v1/get-all-products")
     Call<SingleProductResponse> getProductById(@Query("id") int c_id);
+
+    @FormUrlEncoded
+    @POST("/api/v1/address")
+    Call<RegisterResponse> addAddress(
+            @Header("Apikey") String apikey,
+            @Field("city") String city,
+            @Field("street") String street,
+            @Field("province") String province,
+            @Field("description") String description);
+
+    @GET("/api/v1/address")
+    Call<AddressResponse> getMyAddresses(@Header("Apikey") String apikey);
 
 }
 

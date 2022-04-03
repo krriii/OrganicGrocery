@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/homeBottomNav"
         android:orientation="vertical"
+        android:backgroundTint="#F5F5F5"
        >
         <FrameLayout
             android:id="@+id/homeFL"
