@@ -18,17 +18,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganicGrocery">
         <activity
+            android:name=".admin.addProduct.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.addCategory.AddCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".checkout.orderComplete.OrderCompleteActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".admin.AdminActivity"
             android:exported="true" />
         <activity
             android:name=".checkout.CheckOutActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".checkout.address.AddressActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".singleProductScreen.SingleProductActivity"
             android:exported="false"
@@ -60,6 +69,11 @@
         </activity>
         <activity
             android:name=".home.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <activity
+            android:name=".search.SearchActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
     </application>

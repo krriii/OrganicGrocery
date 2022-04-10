@@ -27,8 +27,6 @@ public class AddressActivity extends AppCompatActivity {
 
     RecyclerView addressRV;
     public static String ADDRESS_SELECTED_KEY = "Dfa";
-    AddressAdapter addressAdapter;
-    List<Address> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +35,12 @@ public class AddressActivity extends AppCompatActivity {
         addressRV = findViewById(R.id.addressRV);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Select Your Address");
+        getSupportActionBar().setTitle("Select Your Delivery Address");
         getAddressOnline();
     }
 
     private void getAddressOnline() {
-        String key = SharedPrefUtils.getString(this, "apk");
+        String key = SharedPrefUtils.getString(this, getString(R.string.api_key));
         Call<AddressResponse> addressResponseCall = ApiClient.getClient().getMyAddresses(key);
         addressResponseCall.enqueue(new Callback<AddressResponse>() {
             @Override
@@ -61,11 +59,10 @@ public class AddressActivity extends AppCompatActivity {
     }
 
     private void listAddress(List<Address> addresses) {
-        data = addresses;
+
         addressRV.setHasFixedSize(true);
         addressRV.setLayoutManager(new LinearLayoutManager(this));
-        addressAdapter = new AddressAdapter(addresses, this);
-        addressRV.setAdapter(addressAdapter);
+        AddressAdapter addressAdapter = new AddressAdapter(addresses, this);
         addressAdapter.setOnAddressItemClickListener(new AddressAdapter.OnAddressItemClickListener() {
             @Override
             public void onAddressClick(int position, Address address) {

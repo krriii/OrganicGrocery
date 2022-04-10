@@ -1,17 +1,8 @@
 package com.example.organicgrocery.userAccount.fragment;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -19,10 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import com.example.organicgrocery.home.MainActivity;
+
+import com.example.organicgrocery.R;
 import com.example.organicgrocery.api.ApiClient;
 import com.example.organicgrocery.api.response.LoginResponse;
-import com.example.organicgrocery.home.MainActivity;
-import com.example.organicgrocery.R;
 import com.example.organicgrocery.utils.SharedPrefUtils;
 
 import retrofit2.Call;
@@ -95,6 +90,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.email_id), loginResponse.getEmail());
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.created_key), loginResponse.getCreatedAt());
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.api_key), loginResponse.getApiKey());
+
 
                                 getActivity().startActivity(new Intent(getContext(), MainActivity.class));
                                 getActivity().finish();

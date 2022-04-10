@@ -1,5 +1,6 @@
 package com.example.organicgrocery.home.fragment.home;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ import com.example.organicgrocery.api.response.SliderResponse;
 import com.example.organicgrocery.home.fragment.home.adapters.CategoryAdapter;
 import com.example.organicgrocery.home.fragment.home.adapters.ShopAdapter;
 import com.example.organicgrocery.home.fragment.home.adapters.SliderAdapter;
+import com.example.organicgrocery.search.SearchActivity;
 import com.example.organicgrocery.utils.DataHolder;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -46,7 +49,7 @@ public class HomeFragment extends Fragment {
     RecyclerView allProductRV, categoryRV;
     ProgressBar loadingProgress;
     SliderView imageSlider;
-    TextView viewAllTV;
+    TextView viewAllTV, searchIt;
     LinearLayout searchLL;
     BottomNavigationView bottomNavigationView;
 
@@ -70,13 +73,25 @@ public class HomeFragment extends Fragment {
         imageSlider = view.findViewById(R.id.imageSlider);
         viewAllTV = view.findViewById(R.id.viewAllTV);
         searchLL = view.findViewById(R.id.searchLL);
+        searchIt = view.findViewById(R.id.searchIt);
         serverCall();
         getCategoriesOnline();
 //        getProductOnline();
         getSliders();
         setClickListeners();
+        searchClickListeners();
 
 
+    }
+
+    private void searchClickListeners() {
+        searchLL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -84,7 +99,7 @@ public class HomeFragment extends Fragment {
         viewAllTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bottomNavigationView.setSelectedItemId(R.id.cartMenu);
+                bottomNavigationView.setSelectedItemId(R.id.categoryMenu);
 
             }
         });
@@ -213,7 +228,7 @@ public class HomeFragment extends Fragment {
         allProductRV.setHasFixedSize(true);
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         allProductRV.setLayoutManager(layoutManager);
-        ShopAdapter shopAdapter = new ShopAdapter(products, getContext());
+        ShopAdapter shopAdapter = new ShopAdapter(products, getContext(), false);
         allProductRV.setAdapter(shopAdapter);
     }
 

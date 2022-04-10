@@ -67,7 +67,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.AddressV
             super(itemView);
             cityStreetTV = itemView.findViewById(R.id.cityStreetTV);
             provinceTV = itemView.findViewById(R.id.provinceTV);
-            districtTV = itemView.findViewById(R.id.decTV);
+            districtTV = itemView.findViewById(R.id.districtTV);
             addressLL = itemView.findViewById(R.id.addressLL);
         }
     }

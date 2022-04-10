@@ -18,6 +18,8 @@ public class UserAccountActivity extends AppCompatActivity  implements View.OnCl
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        getWindow().setStatusBarColor(Color.WHITE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
         registerTV = findViewById(R.id.registerTV);

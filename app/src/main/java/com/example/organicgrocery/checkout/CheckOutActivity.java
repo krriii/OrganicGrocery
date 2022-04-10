@@ -78,7 +78,7 @@ public class CheckOutActivity extends AppCompatActivity {
     private void loadCartList() {
         allProductsRV.setHasFixedSize(true);
         allProductsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        ShopAdapter shopAdapter = new ShopAdapter(products, this);
+        ShopAdapter shopAdapter = new ShopAdapter(products, this, true);
         shopAdapter.setRemoveEnabled(false);
         allProductsRV.setAdapter(shopAdapter);
         setPrice();

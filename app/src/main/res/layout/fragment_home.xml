@@ -19,8 +19,8 @@
 
             <LinearLayout
                 android:id="@+id/searchLL"
-                android:paddingEnd="20dp"
-                android:paddingStart="20dp"
+                android:paddingEnd="25dp"
+                android:paddingStart="25dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_text_background"
@@ -34,12 +34,12 @@
                     android:src="@drawable/ic_baseline_search_24"/>
 
                 <TextView
+                    android:id="@+id/searchIt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Search Products"
+                    android:text="Search product"
 
                     />
-
 
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>

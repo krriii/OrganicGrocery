@@ -65,7 +65,7 @@ public class CartFragment extends Fragment {
         addToCartLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (allProductResponse != null && allProductResponse.getProducts().size() > 0){
+                if (allProductResponse != null && allProductResponse.getProducts().size() > 0) {
                     Intent intent = new Intent(getContext(), CheckOutActivity.class);
                     intent.putExtra(CheckOutActivity.CHECK_OUT_PRODUCTS, allProductResponse);
                     getContext().startActivity(intent);
@@ -83,20 +83,20 @@ public class CartFragment extends Fragment {
 
         getCartItems();
     }
-    private void getCartItems(){
-        String key = SharedPrefUtils.getString(getActivity(), "apk");
-        System.out.println(" sadasdsadasdfsdfsdf    "+ key);
+
+    private void getCartItems() {
+        String key = SharedPrefUtils.getString(getActivity(), getString(R.string.api_key));
         Call<AllProductResponse> cartItemCall = ApiClient.getClient().getMyCart(key);
         cartItemCall.enqueue(new Callback<AllProductResponse>() {
             @Override
             public void onResponse(Call<AllProductResponse> call, Response<AllProductResponse> response) {
                 swipefreshlayout.setRefreshing(false);
-                if (response.isSuccessful()){
-                    if (!response.body().getError()){
+                if (response.isSuccessful()) {
+                    if (!response.body().getError()) {
                         allProductResponse = response.body();
                         products = response.body().getProducts();
                         loadCartList();
-                        setPrice();
+                        setPrice(products);
                     }
                 }
             }
@@ -105,28 +105,42 @@ public class CartFragment extends Fragment {
             public void onFailure(Call<AllProductResponse> call, Throwable t) {
                 swipefreshlayout.setRefreshing(false);
             }
-
-
         });
     }
 
-    private void setPrice() {
+    private void setPrice(List<Product> data) {
+        List<Product> newData = data;
         double totalPrice = 0;
-        for (int i = 0; i < products.size(); i++) {
-            if (products.get(i).getDiscountPrice() != 0 || products.get(i).getDiscountPrice() != null)
-                totalPrice = totalPrice + products.get(i).getDiscountPrice();
+        for (int i = 0; i < newData.size(); i++){
+            Product product = newData.get(i);
+            int price = product.getDiscountPrice();
+            int q = product.getCartQuantity();
+            if(products.get(i).getDiscountPrice() != 0 || products.get(i).getDiscountPrice() != null)
+                totalPrice = totalPrice + price * q;
             else
-                totalPrice = totalPrice + products.get(i).getPrice();
+                totalPrice = totalPrice + price * q;
         }
-        totalPriceTv.setText("( Rs. " + totalPrice + " )");
+        totalPriceTv.setText("Rs. " + totalPrice);
     }
 
 
-    private void loadCartList(){
+//    private void setPrice() {
+//        double totalPrice = 0;
+//        for (int i = 0; i < products.size(); i++) {
+//            if (products.get(i).getDiscountPrice() != 0 || products.get(i).getDiscountPrice() != null)
+//                totalPrice = totalPrice + products.get(i).getDiscountPrice();
+//            else
+//                totalPrice = totalPrice + products.get(i).getPrice();
+//        }
+//        totalPriceTv.setText("( Rs. " + totalPrice + " )");
+//    }
+
+
+    private void loadCartList() {
         allProductRV.setHasFixedSize(true);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         allProductRV.setLayoutManager(layoutManager);
-        ShopAdapter shopAdapter = new ShopAdapter(products, getContext());
+        ShopAdapter shopAdapter = new ShopAdapter(products, getContext(), true);
         shopAdapter.setCartItemClick(new ShopAdapter.CartItemClick() {
             @Override
             public void onRemoveCart(int position) {
@@ -135,10 +149,10 @@ public class CartFragment extends Fragment {
                 removeCartCall.enqueue(new Callback<RegisterResponse>() {
                     @Override
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                        if(response.isSuccessful()){
+                        if (response.isSuccessful()) {
                             products.remove(products.get(position));
                             shopAdapter.notifyItemRemoved(position);
-                            setPrice();
+                            setPrice(products);
                         }
                     }
 
@@ -153,7 +167,7 @@ public class CartFragment extends Fragment {
         allProductRV.setAdapter(shopAdapter);
     }
 
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         getCartItems();
     }

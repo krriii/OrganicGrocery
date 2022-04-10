@@ -67,10 +67,10 @@ public interface ApiService {
     @POST("/api/v1/address")
     Call<RegisterResponse> addAddress(
             @Header("Apikey") String apikey,
-            @Field("city") String city,
-            @Field("street") String street,
             @Field("province") String province,
-            @Field("description") String description);
+            @Field("district") String district,
+            @Field("city") String city,
+            @Field("street") String street);
 
     @GET("/api/v1/address")
     Call<AddressResponse> getMyAddresses(@Header("Apikey") String apikey);

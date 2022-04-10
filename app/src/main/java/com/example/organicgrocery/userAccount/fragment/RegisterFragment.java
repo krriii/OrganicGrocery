@@ -58,6 +58,7 @@ public class RegisterFragment extends Fragment{
                             RegisterResponse registerResponse = response.body();
                             toggleProgress(false);
                             if (response.isSuccessful()) {
+                                System.out.println(registerResponse.getMessage());
                                 Toast.makeText(getActivity(), registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
                                 if (!registerResponse.getError()) {
                                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.formContainerFL, new LoginFragment()).commit();

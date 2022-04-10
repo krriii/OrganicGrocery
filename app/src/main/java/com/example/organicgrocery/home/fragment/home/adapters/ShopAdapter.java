@@ -26,9 +26,9 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     Context context;//layout tasney kaam garcha
     Boolean isCart = false;
     CartItemClick cartItemClick;
-    Boolean removeEnabled;
+    Boolean removeEnabled = false;
 
-    public ShopAdapter(List<Product> productDataList, Context context) {
+    public ShopAdapter(List<Product> productDataList, Context context, Boolean isCart) {
         this.productDataList = productDataList;
         layoutInflater = LayoutInflater.from(context);
         this.context = context;
