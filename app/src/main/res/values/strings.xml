@@ -8,6 +8,7 @@
     <string name="cart">Cart</string>
     <string name="wishlist">WishList</string>
     <string name="profile">Profile</string>
+    <string name="more">More</string>
     <string name="login">Login</string>
     <string name="email_id">Email ID</string>
     <string name="forget">Forget Password ?</string>
@@ -25,6 +26,7 @@
     <string name="email_key" translatable="false">ek</string>
     <string name="name_key" translatable="false">nk</string>
     <string name="created_key" translatable="false">ck</string>
+    <string name="staff_key" translatable="false">sfk</string>
 
 
 </resources>

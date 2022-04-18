@@ -18,10 +18,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrganicGrocery">
         <activity
-            android:name=".admin.addProduct.AddProductActivity"
+            android:name=".checkout.address.AddAddressActivity"
             android:exported="false" />
         <activity
-            android:name=".admin.addCategory.AddCategoryActivity"
+            android:name=".admin.addCategory.ListCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.product.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.addProduct.SelectCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".More.ContactUsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".More.TermsandconditionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".More.AboutUsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".More.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".admin.addProduct.AddProductActivity"
             android:exported="false" />
         <activity
             android:name=".checkout.orderComplete.OrderCompleteActivity"
@@ -71,7 +96,6 @@
             android:name=".home.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-
         <activity
             android:name=".search.SearchActivity"
             android:exported="true"

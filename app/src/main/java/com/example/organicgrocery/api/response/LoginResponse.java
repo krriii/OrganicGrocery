@@ -24,6 +24,10 @@ public class LoginResponse {
     @Expose
     private String createdAt;
 
+    @SerializedName("is_staff")
+    @Expose
+    private Boolean isStaff;
+
     public Boolean getError() {
         return error;
     }
@@ -72,5 +76,12 @@ public class LoginResponse {
         this.createdAt = createdAt;
     }
 
+    public Boolean getIsStaff() {
+        return isStaff;
+    }
+
+    public void setIsStaff(Boolean isStaff) {
+        this.isStaff = isStaff;
+    }
 }
 

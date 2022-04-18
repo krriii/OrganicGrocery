@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.organicgrocery.admin.AdminActivity;
 import com.example.organicgrocery.home.MainActivity;
 
 import com.example.organicgrocery.R;
@@ -90,9 +92,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.email_id), loginResponse.getEmail());
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.created_key), loginResponse.getCreatedAt());
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.api_key), loginResponse.getApiKey());
+                                SharedPrefUtils.setBoolean(getActivity(), getString(R.string.staff_key), loginResponse.getIsStaff());
 
 
-                                getActivity().startActivity(new Intent(getContext(), MainActivity.class));
+                                getActivity().startActivity(new Intent(getContext(),loginResponse.getIsStaff() ? AdminActivity.class :MainActivity.class));
                                 getActivity().finish();
 
                             }

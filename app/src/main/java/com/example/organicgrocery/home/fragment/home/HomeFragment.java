@@ -186,7 +186,7 @@ public class HomeFragment extends Fragment {
 
         categoryRV.setHasFixedSize(true);
         categoryRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        CategoryAdapter categoryAdapter = new CategoryAdapter(temp, getContext(), true);
+        CategoryAdapter categoryAdapter = new CategoryAdapter(temp, getContext(), true, false, null);
         categoryRV.setAdapter(categoryAdapter);
     }
      public void toggleProgress(Boolean toogle){

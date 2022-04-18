@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".More.ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+
+
+            <ImageView
+                android:id="@+id/profilebackIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:elevation="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                app:tint="@color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Edit Profile"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIV"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="80dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cod"
+            app:civ_border_color="@color/primary"
+            app:civ_circle_background_color="@color/primary">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="150dp"-->
+        <!--                    android:layout_marginLeft="80dp"-->
+        <!--                    android:layout_marginTop="30dp"-->
+        <!--                    android:layout_marginRight="80dp"-->
+        <!--                    android:padding="5dp"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    android:src="@drawable/ic_google"-->
+        <!--                    app:civ_border_color="@color/primary" />-->
+
+        <TextView
+            android:id="@+id/profileNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Krisha Gurung"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/primary" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_me" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Full Name"
+            android:textStyle="bold"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Krisha Gurung"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_email" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Email"
+            android:textStyle="bold"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="krishagrg1128@gmail.com"
+            android:layout_marginLeft="55dp"
+            android:textSize="16dp"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_phone" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Phone No:"
+            android:textStyle="bold"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9815122774"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_calender" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Birthday"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/June/2000"
+            android:layout_marginLeft="25dp"
+            android:textSize="16dp"/>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/editLL"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/profilebox"
+        android:onClick="onLoginClicked"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/editTV"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_edit"
+            android:paddingStart="50dp"
+            android:layout_marginLeft="-20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changePasswordLL"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/profilebox"
+        android:onClick="onLoginClicked"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/changepwrdTV"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Change Password"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_padlock"
+            android:drawableTint="@color/primary"
+            android:paddingStart="50dp"
+            android:layout_marginLeft="-20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

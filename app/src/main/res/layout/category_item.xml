@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:id="@+id/categoryLL">
      <de.hdodenhof.circleimageview.CircleImageView
-         android:id="@+id/catIV"
+         android:id="@+id/cateIV"
          android:layout_width="70dp"
          android:layout_height="70dp"
          android:padding="4dp"
@@ -19,7 +19,7 @@
      </de.hdodenhof.circleimageview.CircleImageView>
     <TextView
         android:gravity="center"
-        android:id="@+id/catNameTV"
+        android:id="@+id/cateNameTV"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:lines="2"

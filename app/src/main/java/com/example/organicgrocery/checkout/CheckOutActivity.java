@@ -128,7 +128,7 @@ public class CheckOutActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CheckOutActivity.this, AddressActivity.class);
-                startActivityForResult(intent, 1);
+                startActivity(intent);
 
             }
         });

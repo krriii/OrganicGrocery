@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".admin.product.ListProductActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allProductRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/normal_spacing" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

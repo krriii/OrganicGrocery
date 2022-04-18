@@ -3,18 +3,23 @@ package com.example.organicgrocery.api;
 import com.example.organicgrocery.api.response.AddressResponse;
 import com.example.organicgrocery.api.response.AllProductResponse;
 import com.example.organicgrocery.api.response.CategoryResponse;
+import com.example.organicgrocery.api.response.DashResponse;
 import com.example.organicgrocery.api.response.LoginResponse;
 import com.example.organicgrocery.api.response.RegisterResponse;
 import com.example.organicgrocery.api.response.SingleProductResponse;
 import com.example.organicgrocery.api.response.SliderResponse;
 
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -65,7 +70,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("/api/v1/address")
-    Call<RegisterResponse> addAddress(
+    Call<AddressResponse> addAddress(
             @Header("Apikey") String apikey,
             @Field("province") String province,
             @Field("district") String district,
@@ -75,6 +80,30 @@ public interface ApiService {
     @GET("/api/v1/address")
     Call<AddressResponse> getMyAddresses(@Header("Apikey") String apikey);
 
+    @GET("/api/v1/dash")
+    Call<DashResponse> getDash(@Header("api_key") String apikey);
+
+    @DELETE("/api/v1/category")
+    Call<RegisterResponse> deleteCategory(@Header("api_key") String apikey, @Query("c_id") int id);
+
+    @Multipart
+    @POST("/api/v1/upload-product")
+    Call<RegisterResponse> uploadProduct(
+            @Header("api_key") String apikey,
+            @Part MultipartBody.Part[] files,
+            @Part("name") RequestBody name,
+            @Part("price") RequestBody price,
+            @Part("description") RequestBody description,
+            @Part("quantity") RequestBody quantity,
+            @Part("discount_price") RequestBody discount_price,
+            @Part("categories") RequestBody categories
+    );
+    @Multipart
+    @POST("/api/v1/upload-category")
+    Call<RegisterResponse> uploadCategory(
+            @Header("Apikey") String apikey,
+            @Part MultipartBody.Part file,
+            @Part("name") RequestBody name);
 }
 
 

@@ -9,7 +9,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.organicgrocery.R;
 import com.example.organicgrocery.api.ApiClient;
@@ -26,6 +28,7 @@ import retrofit2.Response;
 public class AddressActivity extends AppCompatActivity {
 
     RecyclerView addressRV;
+    TextView AddAddressTV;
     public static String ADDRESS_SELECTED_KEY = "Dfa";
 
     @Override
@@ -33,10 +36,23 @@ public class AddressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address);
         addressRV = findViewById(R.id.addressRV);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Select Your Delivery Address");
+        AddAddressTV = findViewById(R.id.AddAddressTV);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setTitle("Select Your Delivery Address");
         getAddressOnline();
+        addAddressOnClick();
+    }
+
+    private void addAddressOnClick() {
+        AddAddressTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddressActivity.this, AddAddressActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     private void getAddressOnline() {

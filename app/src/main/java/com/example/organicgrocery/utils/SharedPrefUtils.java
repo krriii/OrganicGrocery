@@ -32,5 +32,7 @@ public class SharedPrefUtils {
     }
 
     public static void clear(Context context) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        sharedPref.edit().clear().commit();
     }
 }

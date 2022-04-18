@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.organicgrocery.R;
 import com.example.organicgrocery.home.fragment.CartFragment;
 import com.example.organicgrocery.home.fragment.CategoryFragment;
+import com.example.organicgrocery.home.fragment.MoreFragment;
 import com.example.organicgrocery.home.fragment.ProfileFragment;
 import com.example.organicgrocery.home.fragment.WishListFragment;
 import com.example.organicgrocery.home.fragment.home.HomeFragment;
@@ -24,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     HomeFragment homeFragment;
     CategoryFragment categoryFragment;
-    ProfileFragment profileFragment;
     CartFragment cartFragment;
     WishListFragment wishListFragment;
     Fragment currentFragment;
+    MoreFragment moreFragment;
 
 
     @Override
@@ -75,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 }
-                if (item.getTitle().equals(getString(R.string.profile))) {
-                    if (profileFragment == null)
-                        profileFragment = new ProfileFragment();
-                    changeFragment(profileFragment);
+                if (item.getTitle().equals(getString(R.string.more))) {
+                    if (moreFragment == null)
+                        moreFragment = new MoreFragment();
+                    changeFragment(moreFragment);
                     return true;
                 }
                 return false;
@@ -93,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
         //fragment talni hide garney show garney
         getSupportFragmentManager().beginTransaction().hide(currentFragment).commit();//hide the fragment
 
-        if (fragment == profileFragment)
-            UserInterfaceUtils.changeStatusBarColor(this, true);
-        else
-            UserInterfaceUtils.changeStatusBarColor(this, false);
+//        if (fragment == profileFragment)
+//            UserInterfaceUtils.changeStatusBarColor(this, true);
+//        else
+//            UserInterfaceUtils.changeStatusBarColor(this, false);
 
         if (fragment.isAdded()){
             getSupportFragmentManager().beginTransaction().show(fragment).commit();

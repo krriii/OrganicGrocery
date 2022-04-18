@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.fragment.MoreFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/backIV"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/large_spacing"-->
+            <!--                android:layout_marginTop="@dimen/large_spacing"-->
+            <!--                android:layout_marginEnd="@dimen/large_spacing"-->
+            <!--                android:layout_marginBottom="@dimen/large_spacing"-->
+            <!--                android:elevation="20dp"-->
+            <!--                android:src="@drawable/ic_back" />-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="More"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/profileTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/rectange_box"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+            android:drawableTint="@color/white"
+            android:padding="@dimen/normal_spacing"
+            android:text="My Profile"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/OrderhistoryTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="My Order"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/wishlistTV"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="@dimen/normal_spacing"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_marginRight="@dimen/normal_spacing"-->
+        <!--            android:background="@drawable/profilebox_shape"-->
+        <!--            android:drawableRight="@drawable/ic_profile_arrow"-->
+        <!--            android:fontFamily="@font/poppins_regular"-->
+        <!--            android:padding="@dimen/normal_spacing"-->
+        <!--            android:text="Wishlist"-->
+        <!--            android:textColor="#455A64"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/policiesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="Terms and Condition"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contactusTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="Contact Us"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/aboutusTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="About"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/helpTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="Help"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+
+        <TextView
+            android:id="@+id/logoutTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_spacing"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/normal_spacing"
+            android:background="@drawable/profilebox_shape"
+            android:drawableRight="@drawable/ic_login_24"
+
+            android:padding="@dimen/normal_spacing"
+            android:text="Log Out"
+            android:textColor="#455A64"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/adminAreaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_spacing"
+        android:background="@drawable/box_shape_selected"
+        android:backgroundTint="#F1EEEE"
+        android:drawableRight="@drawable/ic_baseline_admin_panel_settings_24"
+        android:drawableTint="@color/primary"
+        android:padding="@dimen/normal_spacing"
+        android:text="Admin Area"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>

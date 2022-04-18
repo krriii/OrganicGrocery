@@ -13,14 +13,14 @@
             android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/normal_spacing"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/imageLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -29,7 +29,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@drawable/edit_text_background"
-                    android:padding="10dp"
+                    android:padding="@dimen/small_spacing"
                     android:src="@drawable/ic_baseline_camera_alt_24" />
 
                 <ImageView
@@ -37,16 +37,16 @@
                     android:id="@+id/galleryIV"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/normal_spacing"
                     android:background="@drawable/edit_text_background"
-                    android:padding="10dp"
+                    android:padding="@dimen/small_spacing"
                     android:src="@drawable/ic_baseline_image_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/normal_spacing"
                     android:text="Add Image"
                     android:textColor="@color/black" />
 
@@ -58,10 +58,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/box_shape"
+                android:layout_marginBottom="@dimen/normal_spacing"
+                android:background="@drawable/edit_text_background"
                 android:backgroundTint="@color/white"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 />
 
 
@@ -70,7 +70,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:scaleType="centerCrop"
                 android:visibility="gone" />
 
@@ -78,12 +78,12 @@
                 android:id="@+id/productNameET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:height="50dp"
-                android:background="@drawable/searchbox"
-                android:backgroundTint="@color/primary"
+                android:background="@drawable/box_shape"
+              android:drawableTint="@color/primary"
                 android:hint="Product Name"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
@@ -91,23 +91,23 @@
                 android:id="@+id/priceET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:height="50dp"
                 android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
+               android:drawableTint="@color/primary"
                 android:hint="Price"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/descriptionET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
+               android:drawableTint="@color/primary"
                 android:hint="Description"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 android:gravity="top|left"
                 android:inputType="textEmailAddress|textMultiLine"
                 android:lines="20"
@@ -120,12 +120,12 @@
                 android:id="@+id/quantityET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:height="50dp"
                 android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
+                android:drawableTint="@color/primary"
                 android:hint="Quantity"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
@@ -133,51 +133,51 @@
                 android:id="@+id/discountPriceET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
                 android:height="50dp"
                 android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
+                android:drawableTint="@color/primary"
                 android:hint="Discount Price"
-                android:padding="10dp"
+                android:padding="@dimen/normal_spacing"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-            <TextView
-                android:onClick="pDateClick"
-                android:id="@+id/productionDateET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:height="50dp"
-                android:textSize="18sp"
-                android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
-                android:hint="Production Date"
-                android:padding="10dp"
-                tools:ignore="UsingOnClickInXml" />
+            <!--        <TextView-->
+            <!--            android:onClick="pDateClick"-->
+            <!--            android:id="@+id/productionDateET"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginBottom="@dimen/normal_spacing"-->
+            <!--            android:height="50dp"-->
+            <!--            android:textSize="18sp"-->
+            <!--            android:background="@drawable/box_shape"-->
+            <!--            android:backgroundTint="@color/grey"-->
+            <!--            android:hint="Production Date"-->
+            <!--            android:padding="@dimen/normal_spacing"-->
+            <!--            tools:ignore="UsingOnClickInXml" />-->
 
-            <EditText
-                android:textSize="18sp"
-                android:autofillHints="da"
-                android:id="@+id/expiryDateET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:height="50dp"
-                android:background="@drawable/box_shape"
-                android:backgroundTint="@color/primary"
-                android:hint="Expiry Date"
-                android:padding="10dp"
-                tools:ignore="SpeakableTextPresentCheck" />
+            <!--        <EditText-->
+            <!--            android:textSize="18sp"-->
+            <!--            android:autofillHints="da"-->
+            <!--            android:id="@+id/expiryDateET"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginBottom="@dimen/normal_spacing"-->
+            <!--            android:height="50dp"-->
+            <!--            android:background="@drawable/box_shape"-->
+            <!--            android:backgroundTint="@color/grey"-->
+            <!--            android:hint="Expiry Date"-->
+            <!--            android:padding="@dimen/normal_spacing"-->
+            <!--            tools:ignore="SpeakableTextPresentCheck" />-->
 
             <TextView
                 android:onClick="addCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Categories"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="@dimen/small_spacing"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:drawableEnd="@drawable/ic_baseline_add_24"
+                android:drawableEnd="@drawable/ic_round_add_24"
                 />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -185,14 +185,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/normal_spacing"
 
-                android:padding="8dp"
+                android:padding="@dimen/small_spacing"
                 />
 
 
             <Button
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/large_spacing"
                 android:id="@+id/uploadBtn"
                 android:onClick="uploadProduct"
                 android:layout_width="match_parent"
@@ -204,6 +204,7 @@
 
 
     </ScrollView>
+
 
 
 </androidx.cardview.widget.CardView>

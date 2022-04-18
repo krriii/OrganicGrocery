@@ -18,8 +18,8 @@
         android:icon="@drawable/ic_heart"
         android:title="@string/wishlist" />
     <item
-        android:id="@+id/profileMenu"
-        android:icon="@drawable/ic_user"
-        android:title="@string/profile" />
+        android:id="@+id/More"
+        android:icon="@drawable/ic_setting"
+        android:title="More" />
 
 </menu>
