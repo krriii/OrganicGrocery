@@ -69,7 +69,7 @@ public interface ApiService {
     Call<SingleProductResponse> getProductById(@Query("id") int c_id);
 
     @FormUrlEncoded
-    @POST("/api/v1/address")
+    @POST("/ecommerce/api/v1/address")
     Call<AddressResponse> addAddress(
             @Header("Apikey") String apikey,
             @Field("province") String province,
@@ -77,17 +77,17 @@ public interface ApiService {
             @Field("city") String city,
             @Field("street") String street);
 
-    @GET("/api/v1/address")
+    @GET("/ecommerce/api/v1/address")
     Call<AddressResponse> getMyAddresses(@Header("Apikey") String apikey);
 
-    @GET("/api/v1/dash")
+    @GET("/ecommerce/api/v1/dash")
     Call<DashResponse> getDash(@Header("api_key") String apikey);
 
-    @DELETE("/api/v1/category")
+    @DELETE("/ecommerce/api/v1/category")
     Call<RegisterResponse> deleteCategory(@Header("api_key") String apikey, @Query("c_id") int id);
 
     @Multipart
-    @POST("/api/v1/upload-product")
+    @POST("/ecommerce/api/v1/upload-product")
     Call<RegisterResponse> uploadProduct(
             @Header("api_key") String apikey,
             @Part MultipartBody.Part[] files,
@@ -99,7 +99,7 @@ public interface ApiService {
             @Part("categories") RequestBody categories
     );
     @Multipart
-    @POST("/api/v1/upload-category")
+    @POST("/ecommerce/api/v1/upload-category")
     Call<RegisterResponse> uploadCategory(
             @Header("Apikey") String apikey,
             @Part MultipartBody.Part file,

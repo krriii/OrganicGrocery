@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.organicgrocery.R;
@@ -20,15 +21,22 @@ import retrofit2.Response;
 
 public class ListProductActivity extends AppCompatActivity {
  RecyclerView allProductRV;
+    ImageView productbackIV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_product2);
         allProductRV = findViewById(R.id.allProductRV);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Products");
+        productbackIV = findViewById(R.id.productbackIV);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setTitle("Products");
         serverCall();
+        setOnclickListeners();
+    }
+
+    private void setOnclickListeners() {
+        productbackIV.setOnClickListener(v-> finish());
     }
 
     private void serverCall() {

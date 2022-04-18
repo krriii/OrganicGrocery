@@ -35,134 +35,273 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/edit_text_background"
+    android:layout_margin="10dp"
+  >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="365dp"
-        app:cardBackgroundColor="@color/white"
-        android:paddingStart="@dimen/normal_spacing"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="30dp"
-        android:layout_height="600dp"
-        app:cardCornerRadius="10dp"
-        android:elevation="5dp">
-
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/priceGray"
-                        android:layout_margin="15dp"
-                        android:gravity="left"
-                        android:text="City "
-                        android:textSize="18sp"/>
+                android:textColor="@color/priceGray"
+                android:text="City "
+                android:textSize="18sp"/>
 
-                    <EditText
-                        android:id="@+id/cityET"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/box_shape"
-                        android:layout_marginLeft="60dp"
-                        android:padding="10dp"
-                        android:textSize="18sp"
-                        android:layout_marginTop="10dp"/>
-
-
-                </RelativeLayout>
-
-            <RelativeLayout
+            <EditText
+                android:id="@+id/cityET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:background="@drawable/box_shape"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/priceGray"
-                    android:layout_margin="15dp"
-                    android:gravity="left"
-                    android:text="Street "
-                    android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-                <EditText
-                    android:id="@+id/streetET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/box_shape"
-                    android:layout_marginLeft="65dp"
-                    android:padding="10dp"
-                    android:textSize="18sp"
-                    android:layout_marginTop="10dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_gravity="center_horizontal">
+                android:textColor="@color/priceGray"
+                android:text="Street "
+                android:textSize="18sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/priceGray"
-                    android:text="Province "
-                    android:layout_margin="15dp"
-                    android:layout_marginRight="10dp"
-                    android:gravity="left"
-                    android:textSize="18sp"/>
-
-                <EditText
-                    android:id="@+id/provinceET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/box_shape"
-                    android:gravity="right"
-                    android:padding="10dp"
-                    android:layout_marginLeft="65dp"
-                    android:textSize="18sp"
-                    android:layout_marginTop="10dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
+            <EditText
+                android:id="@+id/streetET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp">
+                android:background="@drawable/box_shape"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/priceGray"
-                    android:text="District "
-                    android:textSize="18sp"/>
+        </LinearLayout>
 
-                <EditText
-                    android:id="@+id/districtET"
-                    android:layout_width="250dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/box_shape"
-                   android:layout_marginLeft="60dp"
-                    android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
-            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/priceGray"
+                android:text="Province "
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/provinceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_shape"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/priceGray"
+                android:text="District "
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/districtET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_shape"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cancelAddressLL"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectange_box"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/cancelTV"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                android:paddingStart="50dp"
+                android:layout_marginLeft="-20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addAddressLL"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectange_box"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/changepwrdTV"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Add Address"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                android:paddingStart="50dp"
+                android:layout_marginLeft="-20dp"/>
+
+        </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_margin="10dp">-->
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="10dp">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textColor="@color/priceGray"-->
+<!--                        android:layout_margin="15dp"-->
+<!--                        android:gravity="left"-->
+<!--                        android:text="City "-->
+<!--                        android:textSize="18sp"/>-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/cityET"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/box_shape"-->
+<!--                        android:layout_marginLeft="60dp"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:layout_marginTop="10dp"/>-->
+
+
+<!--                </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/priceGray"-->
+<!--                    android:layout_margin="15dp"-->
+<!--                    android:gravity="left"-->
+<!--                    android:text="Street "-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/streetET"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/box_shape"-->
+<!--                    android:layout_marginLeft="65dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginTop="10dp"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_gravity="center_horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/priceGray"-->
+<!--                    android:text="Province "-->
+<!--                    android:layout_margin="15dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:gravity="left"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/provinceET"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/box_shape"-->
+<!--                    android:gravity="right"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_marginLeft="65dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginTop="10dp"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_margin="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/priceGray"-->
+<!--                    android:text="District "-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/districtET"-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@drawable/box_shape"-->
+<!--                   android:layout_marginLeft="60dp"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--            </RelativeLayout>-->
 
 
 <!--            <RelativeLayout-->
@@ -211,11 +350,7 @@
 
 <!--            </RelativeLayout>-->
 <!--            -->
-            </LinearLayout>
-        </ScrollView>
-
-    </androidx.cardview.widget.CardView>
+<!--            </LinearLayout>-->
 
 
 
-</LinearLayout>

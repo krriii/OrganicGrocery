@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.example.organicgrocery.R;
 import com.example.organicgrocery.api.ApiClient;
@@ -22,16 +23,24 @@ import retrofit2.Response;
 
 public class SelectCategoryActivity extends AppCompatActivity {
     RecyclerView fullCategoryRV;
+    ImageView catebackIV;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("All Categories");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setTitle("All Categories");
         setContentView(R.layout.activity_select_category);
         fullCategoryRV = findViewById(R.id.fullCatRV);
+        catebackIV = findViewById(R.id.catebackIV);
         getOnline();
+        setOnclickListeners();
+    }
+
+    private void setOnclickListeners() {
+        catebackIV.setOnClickListener(v-> finish());
     }
 
     private void getOnline() {
