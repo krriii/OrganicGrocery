@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".More.ProfileformActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add Your Profile Details"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+
+                />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_background"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Name "
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/nameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_shape"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Email "
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/emailET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_shape"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Phone NUmber "
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/phonenoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_shape"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="DOB "
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/dobET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_shape"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/cancelAddressLL"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rectange_box"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/cancelTV"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+
+                    android:paddingStart="50dp"
+                    android:layout_marginLeft="-20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editProfileLL"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rectange_box"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/addprofileTV"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+
+                    android:paddingStart="50dp"
+                    android:layout_marginLeft="-20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -92,7 +92,7 @@ public class AddProductActivity extends AppCompatActivity {
 
     private void setImgRV() {
         imageRv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        iAdapter = new RAdapter(true, photoUris, null, this, new RAdapter.OnItemCLick() {
+        iAdapter = new RAdapter(true, photoUris, cats, this, new RAdapter.OnItemCLick() {
             @Override
             public void onCLick(int position) {
                 photoUris.remove(position);

@@ -17,7 +17,7 @@ public class LoginResponse {
     @SerializedName("email")
     @Expose
     private String email;
-    @SerializedName("apiKey")
+    @SerializedName("api_key")
     @Expose
     private String apiKey;
     @SerializedName("createdAt")

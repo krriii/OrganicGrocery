@@ -3,12 +3,10 @@ package com.example.organicgrocery.api.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class OrderHistoryResponse {
-    @SerializedName("order_history")
+public class ProfileResponse {
+    @SerializedName("profile")
     @Expose
-    private List<OrderHistory> orderHistory = null;
+    private Profile profile;
     @SerializedName("error")
     @Expose
     private Boolean error;
@@ -16,12 +14,12 @@ public class OrderHistoryResponse {
     @Expose
     private String message;
 
-    public List<OrderHistory> getOrderHistory() {
-        return orderHistory;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setOrderHistory(List<OrderHistory> orderHistory) {
-        this.orderHistory = orderHistory;
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 
     public Boolean getError() {

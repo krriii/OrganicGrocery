@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import androidx.fragment.app.FragmentActivity;
+
 public class SharedPrefUtils {
     public static boolean getBool (Activity context, String key, boolean defaultV){
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -35,4 +37,6 @@ public class SharedPrefUtils {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         sharedPref.edit().clear().commit();
     }
+
+
 }

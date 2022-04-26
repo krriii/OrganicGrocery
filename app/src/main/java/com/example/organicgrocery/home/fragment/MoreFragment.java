@@ -18,6 +18,7 @@ import com.example.organicgrocery.More.ProfileActivity;
 import com.example.organicgrocery.More.TermsandconditionActivity;
 import com.example.organicgrocery.R;
 import com.example.organicgrocery.admin.AdminActivity;
+import com.example.organicgrocery.checkout.orderHistory.OrderActivity;
 import com.example.organicgrocery.userAccount.UserAccountActivity;
 import com.example.organicgrocery.utils.SharedPrefUtils;
 
@@ -26,7 +27,7 @@ public class MoreFragment extends Fragment {
     TextView profileTV;
     TextView adminAreaTV;
     TextView policiesTV;
-    TextView aboutusTV, contactusTV;
+    TextView aboutusTV, contactusTV, OrderhistoryTV;
 
 
 
@@ -46,6 +47,7 @@ public class MoreFragment extends Fragment {
         policiesTV = view.findViewById(R.id.policiesTV);
         aboutusTV = view.findViewById(R.id.aboutusTV);
         contactusTV = view.findViewById(R.id.contactusTV);
+        OrderhistoryTV = view.findViewById(R.id.OrderhistoryTV);
         contactusOnClick();
         checkAdmin();
         setClickListeners();
@@ -117,6 +119,17 @@ public class MoreFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+
+            OrderhistoryTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), OrderActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
+
 
 
         }

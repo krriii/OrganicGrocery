@@ -122,7 +122,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Krisha Gurung"
+            android:text=""
             android:layout_marginLeft="20dp"
             android:textSize="16dp"/>
 
@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="krishagrg1128@gmail.com"
+            android:text=""
             android:layout_marginLeft="55dp"
             android:textSize="16dp"/>
 
@@ -209,7 +209,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="9815122774"
+            android:text=""
             android:layout_marginLeft="20dp"
             android:textSize="16dp"/>
 
@@ -250,7 +250,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10/June/2000"
+            android:text=""
             android:layout_marginLeft="25dp"
             android:textSize="16dp"/>
 

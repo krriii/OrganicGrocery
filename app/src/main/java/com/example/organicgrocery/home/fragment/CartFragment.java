@@ -13,6 +13,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,6 +39,7 @@ public class CartFragment extends Fragment {
     TextView totalPriceTv;
     SwipeRefreshLayout swipefreshlayout;
     LinearLayout addToCartLL;
+    ImageView minusIV, plusIV;
     AllProductResponse allProductResponse;
 
 
@@ -62,6 +64,8 @@ public class CartFragment extends Fragment {
         totalPriceTv = view.findViewById(R.id.totalPriceTv);
         swipefreshlayout = view.findViewById(R.id.swipefreshlayout);
         addToCartLL = view.findViewById(R.id.addToCartLL);
+        minusIV = view.findViewById(R.id.minusIV);
+        plusIV = view.findViewById(R.id.plusIV);
         addToCartLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -163,7 +167,12 @@ public class CartFragment extends Fragment {
                 });
 
             }
-        });
+
+            public void onCartAdd(int position) {
+                String key = SharedPrefUtils.getString(getActivity(), getString(R.string.api_key));
+                Call<RegisterResponse> removeCartCall = ApiClient.getClient().deleteFromCart(key, products.get(position).getCartID());
+            }
+            });
         allProductRV.setAdapter(shopAdapter);
     }
 

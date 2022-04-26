@@ -41,6 +41,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
 
     public interface CartItemClick{
         public void onRemoveCart(int position);
+
     }
 
     public void setRemoveEnabled(Boolean removeEnabled)
@@ -92,7 +93,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
             else
             {
                 holder.removeCartIV.setVisibility(View.GONE);
-                holder.mainLL.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                holder.mainLL.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 setMargins(holder.mainLL, 0, 0, 16, 0);
             }
             holder.quantityTv.setText(productDataList.get(position).getCartQuantity() + "");

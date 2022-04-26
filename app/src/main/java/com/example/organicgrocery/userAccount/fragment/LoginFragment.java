@@ -84,9 +84,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                                 Toast.makeText(getActivity(), loginResponse.getMessgae(), Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(getActivity(), "Welcome", Toast.LENGTH_LONG).show();
-                                System.out.println("22222222222222 Api Key  is: " + loginResponse.getApiKey());
-                                System.out.println("22222222222222 email   is: " + loginResponse.getEmail());
-                                System.out.println("22222222222222 created at   is: " + loginResponse.getCreatedAt());
+
                                 SharedPrefUtils.setBoolean(getActivity(), getString(R.string.isLogged), true);
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.name_key), loginResponse.getName());
                                 SharedPrefUtils.setString(getActivity(), getString(R.string.email_id), loginResponse.getEmail());

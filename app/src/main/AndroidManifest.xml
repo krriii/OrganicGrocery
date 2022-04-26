@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.organicgrocery">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,23 +17,33 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OrganicGrocery">
+        android:theme="@style/Theme.OrganicGrocery"
+        tools:replace="andriod:theme">
+        <activity
+            android:name=".More.ProfileformActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.orderHistory.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".checkout.orderHistory.OrderHistoryActivity"
+            android:exported="false" />
         <activity
             android:name=".checkout.address.AddAddressActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".admin.addCategory.ListCategoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".admin.product.ListProductActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".admin.addProduct.SelectCategoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".More.ContactUsActivity"
             android:exported="false"

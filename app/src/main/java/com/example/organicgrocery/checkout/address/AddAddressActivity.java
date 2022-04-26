@@ -51,7 +51,8 @@ public class AddAddressActivity extends AppCompatActivity {
         setOnClickListener();
     }
 
-    private void cancelOnClickListener() {cancelTV.setOnClickListener(v -> finish());
+    private void cancelOnClickListener() {
+        cancelTV.setOnClickListener(v -> finish());
     }
 
     private void setOnClickListener() {

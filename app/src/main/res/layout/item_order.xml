@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orderDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/cart_box"
+    android:backgroundTint="#f9f9f9"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/Orderid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/dateOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#03A9F4"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/ordrStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D52E10"
+        android:text="Order Status"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/paymentMthd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Payment Method"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/paymentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Status"
+        android:textColor="#149530"
+        android:textSize="16dp" />
+
+
+
+
+
+
+
+
+
+</LinearLayout>

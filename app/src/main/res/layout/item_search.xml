@@ -6,9 +6,12 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     android:layout_marginTop="12dp"
-    android:background="@drawable/box_shape"
+
+    android:background="@drawable/rectange_box"
+    android:backgroundTint="#f9f9f9"
     android:orientation="horizontal"
-    android:padding="12dp">
+    android:padding="12dp"
+    android:layout_margin="12dp">
 
     <ImageView
         android:id="@+id/SearchProductIV"
@@ -64,8 +67,9 @@
                 android:layout_marginLeft="10dp"
                 android:maxLines="2"
                 android:text="Rs 2000"
-                android:textColor="@color/priceGray"
-                android:textSize="14sp" />
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
         </LinearLayout>
 
 

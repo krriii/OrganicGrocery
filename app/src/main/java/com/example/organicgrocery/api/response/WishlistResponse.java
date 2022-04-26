@@ -5,10 +5,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class OrderHistoryResponse {
-    @SerializedName("order_history")
+public class WishlistResponse {
+
+    @SerializedName("products")
     @Expose
-    private List<OrderHistory> orderHistory = null;
+    private List<Wishlist> products = null;
     @SerializedName("error")
     @Expose
     private Boolean error;
@@ -16,12 +17,12 @@ public class OrderHistoryResponse {
     @Expose
     private String message;
 
-    public List<OrderHistory> getOrderHistory() {
-        return orderHistory;
+    public List<Wishlist> getProducts() {
+        return products;
     }
 
-    public void setOrderHistory(List<OrderHistory> orderHistory) {
-        this.orderHistory = orderHistory;
+    public void setProducts(List<Wishlist> products) {
+        this.products = products;
     }
 
     public Boolean getError() {

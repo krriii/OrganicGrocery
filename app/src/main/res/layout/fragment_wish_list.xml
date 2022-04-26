@@ -15,18 +15,15 @@
             android:layout_height="wrap_content"
             android:background="@color/primary">
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/wishlistbackIV"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginStart="@dimen/large_spacing"-->
-            <!--                android:layout_marginTop="@dimen/large_spacing"-->
-            <!--                android:layout_marginEnd="@dimen/large_spacing"-->
-            <!--                android:layout_marginBottom="@dimen/large_spacing"-->
-            <!--                android:elevation="20dp"-->
-            <!--                android:background="@color/primary"-->
-            <!--                android:src="@drawable/ic_back"-->
-            <!--                app:tint="@color/white" />-->
+                        <ImageView
+                            android:id="@+id/wishlistbackIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/large_spacing"
+                            android:layout_marginTop="@dimen/large_spacing"
+                            android:layout_marginEnd="@dimen/large_spacing"
+                            android:layout_marginBottom="@dimen/large_spacing"
+                            android:elevation="20dp" />
 
 
 
@@ -36,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="My Wishlist"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="20sp"
 

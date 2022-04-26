@@ -3,7 +3,9 @@ package com.example.organicgrocery.api.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Bag {
+import java.io.Serializable;
+
+public class Bag implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;

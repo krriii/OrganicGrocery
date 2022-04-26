@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.view.View;
 
 import com.example.organicgrocery.R;
+import com.example.organicgrocery.home.MainActivity;
 import com.example.organicgrocery.userAccount.UserAccountActivity;
 import com.example.organicgrocery.utils.SharedPrefUtils;
 
@@ -27,16 +28,31 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreenActivity.this, UserAccountActivity.class );
-                startActivity(intent);
-                finish();
+                if (getIsLoggedInOrNot()){
+                    Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(SplashScreenActivity.this, UserAccountActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
 
             }
-        }, 3000);{
-
-        }
+        }, 3000);
+//        {
+//
+//        }
+//                public void getIsLoggedInOrNot () {
+//            isLoggedIn = SharedPrefUtils.getBool(this, getString(R.string.isLoggedKey), false);
+//        }
+//
+//    }
     }
-    public void getIsLoggedInOrNot() {
-        isLoggedIn = SharedPrefUtils.getBool(this, "isl", false);
+
+    public boolean getIsLoggedInOrNot() {
+        isLoggedIn = SharedPrefUtils.getBool(this, getString(R.string.isLogged), false);
+        return  isLoggedIn;
     }
 }

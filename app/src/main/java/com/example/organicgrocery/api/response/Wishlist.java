@@ -3,11 +3,9 @@ package com.example.organicgrocery.api.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class Product implements Serializable {
-
+public class Wishlist {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -25,7 +23,7 @@ public class Product implements Serializable {
     private String description;
     @SerializedName("quantity")
     @Expose
-    private String quantity;
+    private Integer quantity;
     @SerializedName("manuf_date")
     @Expose
     private String manufDate;
@@ -38,22 +36,15 @@ public class Product implements Serializable {
     @SerializedName("categories")
     @Expose
     private List<Integer> categories = null;
-    @SerializedName("cart_quantity")
-    @Expose
-    private Integer cartQuantity;
-    @SerializedName("cart_id")
-    @Expose
-    private Integer cartID;
     @SerializedName("wishlist_id")
     @Expose
     private Integer wishlistId;
-
 
     public Integer getId() {
         return id;
     }
 
-    public void setProductId(Integer productId) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -89,11 +80,11 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -129,22 +120,6 @@ public class Product implements Serializable {
         this.categories = categories;
     }
 
-    public Integer getCartQuantity() {
-        return cartQuantity;
-    }
-
-    public void setCartQuantity(Integer cartQuantity) {
-        this.cartQuantity = cartQuantity;
-    }
-
-    public Integer getCartID() {
-        return cartID;
-    }
-
-    public void setCartID(Integer cartID) {
-        this.cartID = cartID;
-    }
-
     public Integer getWishlistId() {
         return wishlistId;
     }
@@ -152,8 +127,5 @@ public class Product implements Serializable {
     public void setWishlistId(Integer wishlistId) {
         this.wishlistId = wishlistId;
     }
-
-
-
 
 }

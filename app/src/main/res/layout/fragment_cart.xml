@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".home.fragment.CartFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,28 +16,29 @@
             android:layout_height="wrap_content"
             android:background="@color/primary">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My Cart"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Cart"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
         </androidx.appcompat.widget.Toolbar>
 
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-       android:id="@+id/swipefreshlayout"
+        android:id="@+id/swipefreshlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.fragment.CartFragment"
-        >
+        tools:context=".home.fragment.CartFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/allProductRV"
@@ -61,13 +61,14 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:layout_marginRight="3dp"
                     android:src="@drawable/ic_bag"
                     app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Order"
+                    android:text="Order Product"
                     android:textColor="@color/white"
                     android:textSize="18dp" />
 

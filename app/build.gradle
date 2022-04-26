@@ -58,6 +58,10 @@ dependencies {
 
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
 
+    implementation ('com.khalti:khalti-android:2.01.02') {
+        transitive = true
+    }
+
 
 }
 

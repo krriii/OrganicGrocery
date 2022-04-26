@@ -79,6 +79,7 @@
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_me.xml" value="0.1305" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_outline_location_on_24.xml" value="0.2203125" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_phone.xml" value="0.1305" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_round_add_2.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_round_add_24.xml" value="0.1625" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_round_arrow_forward_ios_24.xml" value="0.2203125" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_round_close_24.xml" value="0.1" />
@@ -87,23 +88,34 @@
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/ic_undraw_order_confirmed_re_g0if.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/profilebox.xml" value="0.1305" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable-v24/profilebox_shape.xml" value="0.1305" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/box.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/box_shape_selected.xml" value="0.1425925925925926" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/cart_box.xml" value="0.112" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/cart_quantity_box.xml" value="0.1555" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/edit_text_background.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_addition.xml" value="0.1555" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_access_time_filled_24.xml" value="0.1305" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_admin_panel_settings_24.xml" value="0.1425925925925926" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1555" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_keyboard_double_arrow_right_24.xml" value="0.1305" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_cart1.xml" value="0.1475" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1685" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1685" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_minus.xml" value="0.2203125" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_sub.xml" value="0.1555" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/ic_wishlist.xml" value="0.1585" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/productitem.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/rectange_box.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/retangleboxmain.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/searchbox.xml" value="0.1425925925925926" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/wishlist_shape.xml" value="0.1585" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/drawable/wishlistcart.xml" value="0.1555" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_about_us.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_add_address.xml" value="0.25" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_add_category.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_add_product.xml" value="0.1" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_add_product.xml" value="0.18" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_address.xml" value="0.15" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_admin.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_category.xml" value="0.20416666666666666" />
@@ -115,36 +127,45 @@
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_more.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_order.xml" value="0.20512820512820512" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_order2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_order_complete.xml" value="0.25" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_order_history.xml" value="0.25" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_profile.xml" value="0.22" />
-        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_search.xml" value="0.25" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_profileform.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_search.xml" value="0.33" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_select_category.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_single_product.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_single_product.xml" value="0.22" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_splash_screen.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_termsandcondition.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/activity_user_account.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/category_item.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/custom_dialog_add_category.xml" value="0.25" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_cart.xml" value="0.25" />
-        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_category.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_login.xml" value="0.11574074074074074" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_more.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_signin.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/fragment_wish_list.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/historydetails.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_add_category.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_address.xml" value="0.25" />
-        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_cart.xml" value="0.23837209302325582" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_cart.xml" value="0.33" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_cart1.xml" value="0.22" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_category.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_category_noimage.xml" value="0.22" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_image.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_image_slider.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_order.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_product_admin.xml" value="0.1" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_search.xml" value="0.33" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/item_wishlist.xml" value="0.33" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/product_item.xml" value="0.25" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/layout/slider_item.xml" value="0.2" />
         <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/menu/bottom_nav.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1205" />
+        <entry key="..\:/Users/krish/Downloads/OrganicGrocery-20220222T011307Z-001/OrganicGrocery/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1555" />
       </map>
     </option>
   </component>
