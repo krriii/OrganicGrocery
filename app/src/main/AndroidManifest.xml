@@ -21,13 +21,16 @@
         tools:replace="andriod:theme">
         <activity
             android:name=".More.ProfileformActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
             android:name=".checkout.orderHistory.OrderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
             android:name=".checkout.orderHistory.OrderHistoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
             android:name=".checkout.address.AddAddressActivity"
             android:exported="false"

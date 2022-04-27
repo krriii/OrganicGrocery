@@ -123,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:id="@+id/nameTV"
             android:layout_marginLeft="20dp"
             android:textSize="16dp"/>
 
@@ -166,6 +167,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:id="@+id/emailTV"
             android:layout_marginLeft="55dp"
             android:textSize="16dp"/>
 
@@ -210,6 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:id="@+id/phoneTV"
             android:layout_marginLeft="20dp"
             android:textSize="16dp"/>
 
@@ -251,6 +254,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:id="@+id/dobTV"
             android:layout_marginLeft="25dp"
             android:textSize="16dp"/>
 
@@ -275,7 +279,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/profilebox"
-        android:onClick="onLoginClicked"
         android:orientation="vertical">
         <TextView
             android:id="@+id/editTV"

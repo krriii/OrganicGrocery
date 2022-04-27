@@ -77,7 +77,7 @@ public interface ApiService {
     Call<AllProductResponse> getMyWishlist(@Header("api_key") String apikey);
 
     @DELETE("/ecommerce/api/v1/wishlist")
-    Call<RegisterResponse> deleteFromWishlist(@Header("api_key") String apikey, @Query("w_id") int wishlistID);
+    Call<RegisterResponse> deleteFromWishlist(@Header("api_key") String apikey, @Query("wishlist_id") int wishlistID);
     @FormUrlEncoded
     @POST("/ecommerce/api/v1/wishlistToCart")
     Call<RegisterResponse> wishlistToCart(@Header("api_key") String apikey, @Field("wishlist_id") int wishlistID);
